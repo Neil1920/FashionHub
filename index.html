@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Store - Traditional & Western Clothing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loading-overlay">
+        <div class="spinner"></div>
+    </div>
+    
+    <header>
+        <nav class="navbar">
+            <div class="logo">Fashion Store</div>
+            <div class="nav-links">
+                <a href="#" class="active">Home</a>
+                <a href="#men">Men</a>
+                <a href="#women">Women</a>
+                <a href="#cart"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to Fashion Store</h1>
+            <p>Discover the latest trends in traditional and western fashion</p>
+        </section>
+
+        <section class="products" id="products">
+            <div class="filters">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="men">Men</button>
+                <button class="filter-btn" data-category="women">Women</button>
+            </div>
+            
+            <div class="subcategories" id="women-subcategories" style="display: none;">
+                <h3>Women Categories</h3>
+                <div class="subcategory-list">
+                    <button class="subcategory-btn" data-subcategory="party-wear">Party Wear Dresses</button>
+                    <button class="subcategory-btn" data-subcategory="athletic">Women Athletic</button>
+                    <button class="subcategory-btn" data-subcategory="top-wear">Top Wear</button>
+                    <button class="subcategory-btn" data-subcategory="shorts">Shorts</button>
+                    <button class="subcategory-btn" data-subcategory="skirts">Skirts</button>
+                    <button class="subcategory-btn" data-subcategory="trousers">Trousers</button>
+                </div>
+            </div>
+            
+            <div class="subcategories" id="men-subcategories" style="display: none;">
+                <h3>Men Categories</h3>
+                <div class="subcategory-list">
+                    <button class="subcategory-btn" data-subcategory="party-wear">Party Wear Dresses</button>
+                    <button class="subcategory-btn" data-subcategory="casual-trousers">Casual Trousers</button>
+                    <button class="subcategory-btn" data-subcategory="formal-trousers">Formal Trousers</button>
+                    <button class="subcategory-btn" data-subcategory="track-pants">Track Pants</button>
+                    <button class="subcategory-btn" data-subcategory="sneakers">Sneakers</button>
+                    <button class="subcategory-btn" data-subcategory="running-shoes">Running Shoes</button>
+                    <button class="subcategory-btn" data-subcategory="flip-flops">Flip Flops</button>
+                    <button class="subcategory-btn" data-subcategory="formal-tshirt">Formal T-Shirts</button>
+                    <button class="subcategory-btn" data-subcategory="casual-tshirt">Casual T-Shirts</button>
+                    <button class="subcategory-btn" data-subcategory="lungi">Lungi</button>
+                </div>
+            </div>
+            
+            <div class="products-grid" id="products-grid">
+                <!-- Products will be dynamically added here -->
+            </div>
+        </section>
+    </main>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Shopping Cart</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <h3>Total: ₹<span id="cart-total-amount">0</span></h3>
+                <button id="checkout-btn">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-column">
+                <a href="#" class="footer-logo">Fashion Store</a>
+                <p>Your one-stop destination for trendy fashion. We offer a wide selection of traditional and western clothing for men and women with premium quality and competitive prices.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/myntra/?hl=en"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Shop Categories</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Men's Fashion</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Women's Fashion</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Accessories</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Footwear</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> New Arrivals</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Customer Service</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> My Account</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Track Your Order</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Return Policy</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Shipping Information</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> FAQs</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <div class="contact-info">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>123 Fashion Street, Mumbai, India</p>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-phone-alt"></i>
+                    <p>+91 7038257830</p>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-envelope"></i>
+                    <p>swapnilrupnar@gmail.com</p>
+                </div>
+                
+                <h3>Newsletter</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 Fashion Store. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
